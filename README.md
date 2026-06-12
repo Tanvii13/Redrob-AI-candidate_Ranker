@@ -1,23 +1,45 @@
-# Redrob-AI-candidate_Ranker
+# Redrob AI Candidate Ranker
 
-An AI-powered candidate ranking system built for the Redrob Intelligent Candidate Discovery & Ranking Challenge.
+AI-powered candidate ranking system built for the Redrob Intelligent Candidate Discovery & Ranking Challenge.
 
 ## Features
 
-- Semantic candidate matching
-- Skill matching
-- Behavioral signal analysis
-- Experience scoring
-- Candidate ranking
+* Semantic candidate matching using Sentence Transformers
+* AI skill matching
+* Experience scoring
+* Behavioral signal analysis
+* Automated candidate ranking
+* CSV export of ranked candidates
+
+## Tech Stack
+
+* Python
+* Sentence Transformers
+* Scikit-learn
+* Pandas
+* HuggingFace Transformers
 
 ## Project Structure
 
-src/ - Source code
+src/ - Core ranking logic
 
-data/ - Dataset files
+data/ - Candidate and job description data
 
-outputs/ - Generated submissions
+outputs/ - Ranking results
 
-docs/ - Architecture diagrams
+configs/ - Scoring configuration
 
-configs/ - Configuration files
+## Run
+
+```bash
+pip install -r requirements.txt
+python main.py
+```
+
+## Output
+
+The system generates:
+
+outputs/ranked_candidates.csv
+
+containing ranked candidates and their scores.

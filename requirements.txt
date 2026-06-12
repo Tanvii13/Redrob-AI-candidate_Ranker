@@ -1,0 +1,5 @@
+sentence-transformers
+pandas
+scikit-learn
+pyyaml
+python-docx

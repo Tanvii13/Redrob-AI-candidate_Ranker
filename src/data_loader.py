@@ -1,12 +1,9 @@
-import gzip
 import json
 
-def load_candidates(file_path):
-    candidates = []
+def load_sample_candidates(path):
 
-    with gzip.open(file_path, "rt", encoding="utf-8") as f:
-        for line in f:
-            if line.strip():
-                candidates.append(json.loads(line))
+    with open(path, "r", encoding="utf-8") as file:
+
+        candidates = json.load(file)
 
     return candidates
