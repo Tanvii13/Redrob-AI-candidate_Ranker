@@ -1,45 +1,125 @@
-# Redrob AI Candidate Ranker
+# 🤖 Redrob AI Candidate Ranker
 
-AI-powered candidate ranking system built for the Redrob Intelligent Candidate Discovery & Ranking Challenge.
+An AI-powered candidate discovery and ranking system built for the **Redrob Intelligent Candidate Discovery & Ranking Challenge**.
+
+---
+
+## Overview
+
+This project automatically ranks candidates by combining semantic AI matching with skill, experience, behavioral, and production engineering scoring.
+
+Instead of relying only on keyword matching, the system understands the meaning of the candidate profile using Sentence Transformers and produces a weighted final score.
+
+---
 
 ## Features
 
-* Semantic candidate matching using Sentence Transformers
+* Semantic similarity matching using Sentence Transformers
 * AI skill matching
 * Experience scoring
-* Behavioral signal analysis
-* Automated candidate ranking
-* CSV export of ranked candidates
+* Behavioral scoring
+* Production pipeline experience scoring
+* Weighted candidate ranking
+* Automatic CSV export
+
+---
 
 ## Tech Stack
 
 * Python
 * Sentence Transformers
+* HuggingFace Transformers
 * Scikit-learn
 * Pandas
-* HuggingFace Transformers
+* NumPy
+* python-docx
+
+---
+
+## Ranking Strategy
+
+| Metric                | Weight |
+| --------------------- | ------ |
+| Semantic Matching     | 40%    |
+| Skill Score           | 20%    |
+| Experience Score      | 10%    |
+| Behavioral Score      | 15%    |
+| Production Experience | 15%    |
+
+---
 
 ## Project Structure
 
-src/ - Core ranking logic
+```text
+Redrob-AI-candidate_Ranker/
 
-data/ - Candidate and job description data
+├── data/
+├── outputs/
+├── src/
+│   ├── semantic_ranker.py
+│   ├── skill_matcher.py
+│   ├── experience_matcher.py
+│   ├── production_matcher.py
+│   ├── behavior_ranker.py
+│   ├── final_ranker.py
+│   ├── text_builder.py
+│   └── job_loader.py
+│
+├── main.py
+├── requirements.txt
+└── README.md
+```
 
-outputs/ - Ranking results
+---
 
-configs/ - Scoring configuration
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+---
 
 ## Run
 
 ```bash
-pip install -r requirements.txt
 python main.py
 ```
+
+---
 
 ## Output
 
 The system generates:
 
+```
 outputs/ranked_candidates.csv
+```
 
-containing ranked candidates and their scores.
+containing:
+
+* Candidate ID
+* Candidate Name
+* Semantic Score
+* Skill Score
+* Experience Score
+* Production Score
+* Behavioral Score
+* Final Score
+
+---
+
+## Future Improvements
+
+* Resume PDF parsing
+* LLM-based skill extraction
+* Explainable AI ranking
+* Dynamic scoring configuration
+* REST API deployment
+* Streamlit dashboard
+
+---
+
+## Author
+
+Tanvi
