@@ -2,10 +2,10 @@ from src.data_loader import load_sample_candidates
 from src.job_loader import load_job_description
 from src.text_builder import build_candidate_text
 from src.semantic_ranker import get_semantic_score
-
 from src.skill_matcher import get_skill_score
 from src.experience_matcher import get_experience_score
 from src.behavior_ranker import get_behavior_score
+from src.production_matcher import get_production_score
 from src.final_ranker import calculate_final_score
 
 import pandas as pd
@@ -40,6 +40,10 @@ for candidate in candidates:
         candidate
     )
 
+    production = get_production_score(
+        candidate
+    )
+
     behavior = get_behavior_score(
         candidate
     )
@@ -48,7 +52,8 @@ for candidate in candidates:
         semantic,
         skill,
         experience,
-        behavior
+        behavior,
+        production
     )
 
     results.append({
@@ -66,6 +71,9 @@ for candidate in candidates:
 
         "experience":
             experience,
+
+        "production":
+            production,
 
         "behavior":
             behavior,

@@ -1,5 +1,8 @@
 sentence-transformers
-pandas
+torch
+transformers
 scikit-learn
-pyyaml
+pandas
 python-docx
+pyyaml
+numpy   
