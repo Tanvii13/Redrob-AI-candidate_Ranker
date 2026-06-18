@@ -1,12 +1,15 @@
+import csv
 import json
 from http.server import BaseHTTPRequestHandler
 from pathlib import Path
+from urllib.parse import parse_qs, urlparse
 
 from main import normalize_scores, reasoning, score_candidate
 
 
 ROOT = Path(__file__).resolve().parents[1]
 SAMPLE_PATH = ROOT / "data" / "sample_candidates.json"
+SUBMISSION_PATH = ROOT / "outputs" / "submission.csv"
 
 
 def load_sample_candidates():
@@ -14,7 +17,7 @@ def load_sample_candidates():
         return json.load(handle)
 
 
-def build_response():
+def build_sample_response(limit):
     candidates = load_sample_candidates()
     scored = []
     kept_candidates = {}
@@ -24,8 +27,9 @@ def build_response():
         scored.append(row)
         kept_candidates[row["candidate_id"]] = candidate
 
+    safe_limit = max(1, min(limit, len(scored)))
     scored.sort(key=lambda row: (-row["score"], row["candidate_id"]))
-    top_rows = normalize_scores(scored[:10])
+    top_rows = normalize_scores(scored[:safe_limit])
 
     results = []
     for rank, row in enumerate(top_rows, start=1):
@@ -39,15 +43,51 @@ def build_response():
         })
 
     return {
-        "message": "Redrob ranker sandbox using sample_candidates.json",
+        "message": "Sample sandbox ranking from data/sample_candidates.json",
+        "source": "sample",
         "candidate_count": len(candidates),
+        "display_count": len(results),
         "results": results,
     }
 
 
+def build_submission_response():
+    results = []
+    with open(SUBMISSION_PATH, "r", encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            results.append({
+                "rank": int(row["rank"]),
+                "candidate_id": row["candidate_id"],
+                "name": "",
+                "score": row["score"],
+                "reasoning": row["reasoning"],
+            })
+
+    results.sort(key=lambda row: row["rank"])
+    return {
+        "message": "Final validated top-100 submission from outputs/submission.csv",
+        "source": "submission",
+        "candidate_count": 100000,
+        "display_count": len(results),
+        "results": results,
+    }
+
+
+def build_response(path):
+    query = parse_qs(urlparse(path).query)
+    view = query.get("view", ["sample10"])[0]
+
+    if view == "sample50":
+        return build_sample_response(50)
+    if view == "submission100":
+        return build_submission_response()
+    return build_sample_response(10)
+
+
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        body = json.dumps(build_response()).encode("utf-8")
+        body = json.dumps(build_response(self.path)).encode("utf-8")
         self.send_response(200)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(body)))

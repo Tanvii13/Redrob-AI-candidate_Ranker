@@ -9,7 +9,7 @@
         color-scheme: light;
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         color: #172033;
-        background: #eef3f8;
+        background: #edf2f7;
       }
 
       * {
@@ -20,47 +20,46 @@
         margin: 0;
       }
 
-      .top-band {
+      .hero {
+        color: #ffffff;
         background:
-          linear-gradient(135deg, rgba(10, 36, 63, 0.98), rgba(25, 75, 95, 0.94)),
+          linear-gradient(135deg, rgba(9, 27, 48, 0.96), rgba(18, 79, 91, 0.9)),
           url("https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1800&q=80");
         background-position: center;
         background-size: cover;
-        color: #ffffff;
       }
 
-      main {
-        max-width: 1180px;
+      .shell {
+        max-width: 1220px;
         margin: 0 auto;
-        padding: 34px 20px 48px;
+        padding: 34px 20px 46px;
       }
 
       header {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 22px;
+        grid-template-columns: minmax(0, 1fr) 360px;
+        gap: 28px;
         align-items: end;
-        padding: 30px 0 34px;
+        min-height: 320px;
       }
 
       .eyebrow {
         display: inline-flex;
-        align-items: center;
         width: fit-content;
         border: 1px solid rgba(255, 255, 255, 0.28);
         border-radius: 999px;
         padding: 6px 10px;
-        color: #d7f0ff;
+        color: #d7f8ff;
         font-size: 12px;
-        font-weight: 700;
+        font-weight: 800;
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
 
       h1 {
-        margin: 14px 0 10px;
         max-width: 760px;
-        font-size: clamp(34px, 5vw, 58px);
+        margin: 14px 0 12px;
+        font-size: clamp(36px, 5vw, 62px);
         line-height: 1.02;
         letter-spacing: 0;
       }
@@ -68,36 +67,67 @@
       .lede {
         max-width: 780px;
         margin: 0;
-        color: #dce9f2;
+        color: #e0edf4;
         font-size: 17px;
-        line-height: 1.58;
+        line-height: 1.6;
       }
 
-      .run-panel {
-        min-width: 280px;
-        padding: 18px;
+      .control-panel {
         border: 1px solid rgba(255, 255, 255, 0.18);
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
+        padding: 18px;
+        background: rgba(255, 255, 255, 0.11);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+        backdrop-filter: blur(12px);
       }
 
-      button {
-        width: 100%;
+      .panel-label {
+        display: block;
+        margin-bottom: 10px;
+        color: #d7f8ff;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .view-switcher {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+
+      .view-button,
+      .run-button {
         border: 0;
         border-radius: 7px;
-        padding: 12px 16px;
+        padding: 12px 14px;
         font-weight: 800;
-        color: #102033;
-        background: #7be0c3;
         cursor: pointer;
       }
 
-      button:hover {
-        background: #91ecd2;
+      .view-button {
+        color: #eaf7fb;
+        background: rgba(255, 255, 255, 0.12);
+        text-align: left;
       }
 
-      button:disabled {
+      .view-button[aria-pressed="true"] {
+        color: #102033;
+        background: #ffffff;
+      }
+
+      .run-button {
+        width: 100%;
+        color: #102033;
+        background: #72e0c0;
+      }
+
+      .run-button:hover {
+        background: #8aebcf;
+      }
+
+      .run-button:disabled {
         opacity: 0.72;
         cursor: wait;
       }
@@ -105,20 +135,20 @@
       .status {
         display: block;
         margin-top: 12px;
-        color: #dce9f2;
+        color: #e0edf4;
         font-size: 13px;
         line-height: 1.45;
       }
 
-      .content-band {
-        background: #eef3f8;
+      .content {
+        background: #edf2f7;
       }
 
       .metrics {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 12px;
-        margin: -22px 0 22px;
+        margin: -32px 0 22px;
       }
 
       .metric {
@@ -127,14 +157,14 @@
         border-radius: 8px;
         padding: 16px;
         background: #ffffff;
-        box-shadow: 0 10px 24px rgba(24, 46, 70, 0.08);
+        box-shadow: 0 12px 26px rgba(24, 46, 70, 0.09);
       }
 
       .metric span {
         display: block;
         color: #607086;
         font-size: 12px;
-        font-weight: 700;
+        font-weight: 800;
         letter-spacing: 0.06em;
         text-transform: uppercase;
       }
@@ -142,7 +172,31 @@
       .metric strong {
         display: block;
         margin-top: 8px;
-        font-size: 24px;
+        font-size: 25px;
+      }
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin: 0 0 14px;
+      }
+
+      .toolbar h2 {
+        margin: 0;
+        font-size: 21px;
+        letter-spacing: 0;
+      }
+
+      .source-pill {
+        border: 1px solid #cbd8e5;
+        border-radius: 999px;
+        padding: 7px 10px;
+        color: #526174;
+        background: #ffffff;
+        font-size: 12px;
+        font-weight: 800;
       }
 
       .table-wrap {
@@ -168,6 +222,9 @@
       }
 
       th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
         background: #f7fafc;
         color: #516174;
         font-size: 11px;
@@ -175,23 +232,23 @@
         text-transform: uppercase;
       }
 
-      tr:last-child td {
-        border-bottom: 0;
-      }
-
       tbody tr:hover {
         background: #fbfdff;
       }
 
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
       .rank {
         width: 64px;
-        font-weight: 800;
+        font-weight: 900;
       }
 
       .score {
         width: 110px;
         font-variant-numeric: tabular-nums;
-        font-weight: 800;
+        font-weight: 900;
       }
 
       .candidate {
@@ -210,11 +267,11 @@
 
       .reasoning {
         color: #223149;
-        line-height: 1.42;
+        line-height: 1.43;
       }
 
       .empty {
-        padding: 26px 16px;
+        padding: 28px 16px;
         color: #607086;
       }
 
@@ -225,13 +282,10 @@
         line-height: 1.55;
       }
 
-      @media (max-width: 820px) {
+      @media (max-width: 880px) {
         header {
           grid-template-columns: 1fr;
-        }
-
-        .run-panel {
-          min-width: 0;
+          min-height: 0;
         }
 
         .metrics {
@@ -244,63 +298,85 @@
         }
 
         table {
-          min-width: 820px;
+          min-width: 880px;
         }
       }
 
-      @media (max-width: 520px) {
-        main {
+      @media (max-width: 560px) {
+        .shell {
           padding-inline: 14px;
         }
 
         .metrics {
           grid-template-columns: 1fr;
         }
+
+        .toolbar {
+          align-items: flex-start;
+          flex-direction: column;
+        }
       }
     </style>
   </head>
   <body>
-    <section class="top-band">
-      <main>
+    <section class="hero">
+      <div class="shell">
         <header>
           <div>
             <span class="eyebrow">Redrob Hackathon Sandbox</span>
             <h1>Candidate intelligence for recruiter-grade shortlists</h1>
             <p class="lede">
-              A hosted demo of the local hybrid ranker: title and career fit,
-              AI/ML system evidence, skill strength, availability signals,
+              A hosted demo of the local hybrid ranker: AI/ML title fit, ranking
+              and retrieval evidence, skill strength, availability signals,
               location fit, and profile-consistency penalties.
             </p>
           </div>
 
-          <div class="run-panel">
-            <button id="runButton" type="button">Run Sample Ranking</button>
-            <span id="status" class="status">Ready to rank the provided sample profiles.</span>
-          </div>
+          <aside class="control-panel">
+            <span class="panel-label">Ranking View</span>
+            <div class="view-switcher" role="group" aria-label="Choose ranking view">
+              <button class="view-button" type="button" data-view="sample10" aria-pressed="true">
+                Sample Top 10
+              </button>
+              <button class="view-button" type="button" data-view="sample50" aria-pressed="false">
+                Sample Top 50
+              </button>
+              <button class="view-button" type="button" data-view="submission100" aria-pressed="false">
+                Final Top 100
+              </button>
+            </div>
+            <button id="runButton" class="run-button" type="button">Run Selected View</button>
+            <span id="status" class="status">Ready to preview the selected ranking.</span>
+          </aside>
         </header>
-      </main>
+      </div>
     </section>
 
-    <section class="content-band">
-      <main>
-        <section class="metrics" aria-label="Sandbox summary">
+    <section class="content">
+      <div class="shell">
+        <section class="metrics" aria-label="Ranking summary">
           <div class="metric">
-            <span>Demo input</span>
-            <strong id="sampleCount">50</strong>
+            <span>Current input</span>
+            <strong id="inputCount">50</strong>
           </div>
           <div class="metric">
             <span>Displayed</span>
             <strong id="displayCount">Top 10</strong>
           </div>
           <div class="metric">
-            <span>Full run</span>
+            <span>Full dataset</span>
             <strong>100K</strong>
           </div>
           <div class="metric">
-            <span>Judged CSV</span>
+            <span>Judged file</span>
             <strong>Top 100</strong>
           </div>
         </section>
+
+        <div class="toolbar">
+          <h2 id="tableTitle">Sample Top 10 Preview</h2>
+          <span id="sourceLabel" class="source-pill">sample_candidates.json</span>
+        </div>
 
         <div class="table-wrap">
           <table>
@@ -314,29 +390,55 @@
             </thead>
             <tbody id="results">
               <tr>
-                <td class="empty" colspan="4">Run the sample ranking to preview the top candidates.</td>
+                <td class="empty" colspan="4">Choose a view and run the ranking preview.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <p class="note">
-          Sandbox mode uses the organizer-provided sample file for a fast hosted
-          check. The actual hackathon submission is generated locally from all
-          100,000 profiles and validated as a 100-row CSV.
+          Sample views run on the organizer-provided 50-profile sample for a
+          quick hosted check. Final Top 100 displays the validated submission
+          CSV generated locally from all 100,000 profiles.
         </p>
-      </main>
+      </div>
     </section>
 
     <script>
-      const button = document.getElementById("runButton");
+      const views = {
+        sample10: {
+          title: "Sample Top 10 Preview",
+          source: "sample_candidates.json",
+          inputLabel: "50",
+          loading: "Ranking the 50 sample profiles and showing top 10..."
+        },
+        sample50: {
+          title: "Sample Top 50 Preview",
+          source: "sample_candidates.json",
+          inputLabel: "50",
+          loading: "Ranking and displaying all 50 sample profiles..."
+        },
+        submission100: {
+          title: "Final Top 100 Submission",
+          source: "outputs/submission.csv",
+          inputLabel: "100K",
+          loading: "Loading the validated final top-100 CSV..."
+        }
+      };
+
+      let selectedView = "sample10";
+
+      const buttons = Array.from(document.querySelectorAll(".view-button"));
+      const runButton = document.getElementById("runButton");
       const statusEl = document.getElementById("status");
       const resultsEl = document.getElementById("results");
-      const sampleCountEl = document.getElementById("sampleCount");
+      const inputCountEl = document.getElementById("inputCount");
       const displayCountEl = document.getElementById("displayCount");
+      const tableTitleEl = document.getElementById("tableTitle");
+      const sourceLabelEl = document.getElementById("sourceLabel");
 
       function escapeHtml(value) {
-        return String(value)
+        return String(value ?? "")
           .replaceAll("&", "&amp;")
           .replaceAll("<", "&lt;")
           .replaceAll(">", "&gt;")
@@ -344,40 +446,62 @@
           .replaceAll("'", "&#039;");
       }
 
-      function renderRows(rows) {
-        resultsEl.innerHTML = rows.map((row) => `
-          <tr>
-            <td class="rank">${row.rank}</td>
-            <td class="candidate">
-              <strong>${escapeHtml(row.name)}</strong>
-              <code>${escapeHtml(row.candidate_id)}</code>
-            </td>
-            <td class="score">${row.score}</td>
-            <td class="reasoning">${escapeHtml(row.reasoning)}</td>
-          </tr>
-        `).join("");
+      function selectView(view) {
+        selectedView = view;
+        buttons.forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.view === view));
+        });
+        tableTitleEl.textContent = views[view].title;
+        sourceLabelEl.textContent = views[view].source;
+        inputCountEl.textContent = views[view].inputLabel;
+        displayCountEl.textContent = view === "submission100" ? "Top 100" : view === "sample50" ? "Top 50" : "Top 10";
+        statusEl.textContent = "Ready to preview the selected ranking.";
+        resultsEl.innerHTML = '<tr><td class="empty" colspan="4">Run the selected view to load candidates.</td></tr>';
       }
 
-      button.addEventListener("click", async () => {
-        button.disabled = true;
-        statusEl.textContent = "Running the sample ranker...";
-        resultsEl.innerHTML = '<tr><td class="empty" colspan="4">Loading ranked candidates...</td></tr>';
+      function renderRows(rows) {
+        resultsEl.innerHTML = rows.map((row) => {
+          const label = row.name ? escapeHtml(row.name) : "Final submission row";
+          return `
+            <tr>
+              <td class="rank">${row.rank}</td>
+              <td class="candidate">
+                <strong>${label}</strong>
+                <code>${escapeHtml(row.candidate_id)}</code>
+              </td>
+              <td class="score">${escapeHtml(row.score)}</td>
+              <td class="reasoning">${escapeHtml(row.reasoning)}</td>
+            </tr>
+          `;
+        }).join("");
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => selectView(button.dataset.view));
+      });
+
+      runButton.addEventListener("click", async () => {
+        runButton.disabled = true;
+        statusEl.textContent = views[selectedView].loading;
+        resultsEl.innerHTML = '<tr><td class="empty" colspan="4">Loading candidates...</td></tr>';
 
         try {
-          const response = await fetch("/api/rank");
+          const response = await fetch(`/api/rank?view=${selectedView}`);
           if (!response.ok) {
             throw new Error(`Request failed: ${response.status}`);
           }
           const data = await response.json();
           renderRows(data.results);
-          sampleCountEl.textContent = data.candidate_count;
-          displayCountEl.textContent = `Top ${data.results.length}`;
-          statusEl.textContent = `Loaded ${data.candidate_count} sample profiles; showing top ${data.results.length}.`;
+          inputCountEl.textContent = data.source === "submission" ? "100K" : data.candidate_count;
+          displayCountEl.textContent = `Top ${data.display_count}`;
+          statusEl.textContent = data.source === "submission"
+            ? `Loaded the final validated top ${data.display_count} rows.`
+            : `Loaded ${data.candidate_count} sample profiles; showing top ${data.display_count}.`;
         } catch (error) {
-          statusEl.textContent = "Could not run the sandbox.";
+          statusEl.textContent = "Could not load this view.";
           resultsEl.innerHTML = `<tr><td class="empty" colspan="4">${escapeHtml(error.message)}</td></tr>`;
         } finally {
-          button.disabled = false;
+          runButton.disabled = false;
         }
       });
     </script>
