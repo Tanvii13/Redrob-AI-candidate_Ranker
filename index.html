@@ -260,7 +260,15 @@
         margin-bottom: 4px;
       }
 
+      .candidate span {
+        display: block;
+        margin-bottom: 5px;
+        color: #516174;
+        font-size: 12px;
+      }
+
       .candidate code {
+        display: block;
         color: #64748b;
         font-size: 12px;
       }
@@ -461,12 +469,16 @@
 
       function renderRows(rows) {
         resultsEl.innerHTML = rows.map((row) => {
-          const label = row.name ? escapeHtml(row.name) : "Final submission row";
+          const label = row.name ? escapeHtml(row.name) : "Candidate";
+          const details = row.title
+            ? `<span>${escapeHtml(row.title)}${row.years ? ` · ${escapeHtml(row.years)} yrs` : ""}</span>`
+            : "";
           return `
             <tr>
               <td class="rank">${row.rank}</td>
               <td class="candidate">
                 <strong>${label}</strong>
+                ${details}
                 <code>${escapeHtml(row.candidate_id)}</code>
               </td>
               <td class="score">${escapeHtml(row.score)}</td>

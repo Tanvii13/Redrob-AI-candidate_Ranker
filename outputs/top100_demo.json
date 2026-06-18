@@ -1,0 +1,902 @@
+[
+  {
+    "rank": 1,
+    "candidate_id": "CAND_0027691",
+    "name": "Ayaan Goyal",
+    "title": "NLP Engineer",
+    "years": 6.5,
+    "score": "1.0",
+    "reasoning": "NLP Engineer with 6.5 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, Statistical Modeling, TensorFlow."
+  },
+  {
+    "rank": 2,
+    "candidate_id": "CAND_0037566",
+    "name": "Ritu Nair",
+    "title": "Machine Learning Engineer",
+    "years": 6.9,
+    "score": "1.0",
+    "reasoning": "Machine Learning Engineer with 6.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: NLP, LoRA, Feature Engineering."
+  },
+  {
+    "rank": 3,
+    "candidate_id": "CAND_0092255",
+    "name": "Jay Chatterjee",
+    "title": "ML Engineer",
+    "years": 5.2,
+    "score": "1.0",
+    "reasoning": "ML Engineer with 5.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Machine Learning, PyTorch, Statistical Modeling."
+  },
+  {
+    "rank": 4,
+    "candidate_id": "CAND_0010257",
+    "name": "Ira Shetty",
+    "title": "Senior Data Scientist",
+    "years": 6.5,
+    "score": "0.9727",
+    "reasoning": "Senior Data Scientist with 6.5 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Milvus, TensorFlow, Python; concern: 120-day notice period."
+  },
+  {
+    "rank": 5,
+    "candidate_id": "CAND_0081852",
+    "name": "Krishna Subramanian",
+    "title": "Senior Data Scientist",
+    "years": 5.9,
+    "score": "0.9709",
+    "reasoning": "Senior Data Scientist with 5.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Milvus, LoRA, MLOps."
+  },
+  {
+    "rank": 6,
+    "candidate_id": "CAND_0046525",
+    "name": "Tanvi Mukherjee",
+    "title": "Senior Machine Learning Engineer",
+    "years": 6.1,
+    "score": "0.965",
+    "reasoning": "Senior Machine Learning Engineer with 6.1 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Machine Learning, TensorFlow, NLP."
+  },
+  {
+    "rank": 7,
+    "candidate_id": "CAND_0050454",
+    "name": "Saanvi Bansal",
+    "title": "AI Engineer",
+    "years": 6.8,
+    "score": "0.9343",
+    "reasoning": "AI Engineer with 6.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: PyTorch, Fine-tuning LLMs, Feature Engineering."
+  },
+  {
+    "rank": 8,
+    "candidate_id": "CAND_0006567",
+    "name": "Aditya Subramanian",
+    "title": "Senior AI Engineer",
+    "years": 7.9,
+    "score": "0.9163",
+    "reasoning": "Senior AI Engineer with 7.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: NLP, Kubernetes, Python."
+  },
+  {
+    "rank": 9,
+    "candidate_id": "CAND_0005649",
+    "name": "Riya Kapoor",
+    "title": "Senior Data Scientist",
+    "years": 7.4,
+    "score": "0.9067",
+    "reasoning": "Senior Data Scientist with 7.4 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Deep Learning, TensorFlow, Fine-tuning LLMs."
+  },
+  {
+    "rank": 10,
+    "candidate_id": "CAND_0058575",
+    "name": "Suresh Dutta",
+    "title": "AI Engineer",
+    "years": 5.8,
+    "score": "0.8682",
+    "reasoning": "AI Engineer with 5.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: MLOps, Machine Learning, PyTorch."
+  },
+  {
+    "rank": 11,
+    "candidate_id": "CAND_0083879",
+    "name": "Mira Reddy",
+    "title": "Machine Learning Engineer",
+    "years": 7.1,
+    "score": "0.8662",
+    "reasoning": "Machine Learning Engineer with 7.1 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: MLOps, Fine-tuning LLMs, Milvus."
+  },
+  {
+    "rank": 12,
+    "candidate_id": "CAND_0029367",
+    "name": "Yash Malhotra",
+    "title": "Senior Data Scientist",
+    "years": 5.7,
+    "score": "0.8007",
+    "reasoning": "Senior Data Scientist with 5.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: TensorFlow, NLP, PyTorch."
+  },
+  {
+    "rank": 13,
+    "candidate_id": "CAND_0096142",
+    "name": "Pranav Sethi",
+    "title": "Applied ML Engineer",
+    "years": 5.0,
+    "score": "0.7927",
+    "reasoning": "Applied ML Engineer with 5.0 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, Python, NLP; concern: 120-day notice period."
+  },
+  {
+    "rank": 14,
+    "candidate_id": "CAND_0007052",
+    "name": "Nisha Bansal",
+    "title": "ML Engineer",
+    "years": 6.5,
+    "score": "0.7844",
+    "reasoning": "ML Engineer with 6.5 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Statistical Modeling, Deep Learning, Milvus."
+  },
+  {
+    "rank": 15,
+    "candidate_id": "CAND_0005260",
+    "name": "Mira Ghosh",
+    "title": "Senior NLP Engineer",
+    "years": 5.2,
+    "score": "0.7233",
+    "reasoning": "Senior NLP Engineer with 5.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Statistical Modeling, MLOps, Deep Learning; concern: not marked open to work."
+  },
+  {
+    "rank": 16,
+    "candidate_id": "CAND_0037980",
+    "name": "Reyansh Chowdary",
+    "title": "Senior Applied Scientist",
+    "years": 9.0,
+    "score": "0.7209",
+    "reasoning": "Senior Applied Scientist with 9.0 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, PyTorch, NLP."
+  },
+  {
+    "rank": 17,
+    "candidate_id": "CAND_0041669",
+    "name": "Aisha Banerjee",
+    "title": "Recommendation Systems Engineer",
+    "years": 8.0,
+    "score": "0.7209",
+    "reasoning": "Recommendation Systems Engineer with 8.0 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Milvus, MLOps, Machine Learning."
+  },
+  {
+    "rank": 18,
+    "candidate_id": "CAND_0052328",
+    "name": "Vikram Banerjee",
+    "title": "Recommendation Systems Engineer",
+    "years": 6.5,
+    "score": "0.7209",
+    "reasoning": "Recommendation Systems Engineer with 6.5 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, Fine-tuning LLMs, Python."
+  },
+  {
+    "rank": 19,
+    "candidate_id": "CAND_0069905",
+    "name": "Nisha Bansal",
+    "title": "Applied ML Engineer",
+    "years": 6.6,
+    "score": "0.7209",
+    "reasoning": "Applied ML Engineer with 6.6 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, TensorFlow, MLOps."
+  },
+  {
+    "rank": 20,
+    "candidate_id": "CAND_0086022",
+    "name": "Dhruv Naidu",
+    "title": "Senior Applied Scientist",
+    "years": 5.3,
+    "score": "0.7209",
+    "reasoning": "Senior Applied Scientist with 5.3 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Deep Learning, Fine-tuning LLMs, PyTorch."
+  },
+  {
+    "rank": 21,
+    "candidate_id": "CAND_0066376",
+    "name": "Amit Goyal",
+    "title": "Applied ML Engineer",
+    "years": 5.7,
+    "score": "0.6843",
+    "reasoning": "Applied ML Engineer with 5.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, Fine-tuning LLMs, Deep Learning."
+  },
+  {
+    "rank": 22,
+    "candidate_id": "CAND_0020877",
+    "name": "Anil Rao",
+    "title": "Applied ML Engineer",
+    "years": 5.1,
+    "score": "0.6675",
+    "reasoning": "Applied ML Engineer with 5.1 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: PyTorch, Statistical Modeling, Deep Learning; concern: not marked open to work."
+  },
+  {
+    "rank": 23,
+    "candidate_id": "CAND_0016163",
+    "name": "Suresh Shah",
+    "title": "Applied ML Engineer",
+    "years": 6.7,
+    "score": "0.6633",
+    "reasoning": "Applied ML Engineer with 6.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Deep Learning, TensorFlow, LoRA; concern: 120-day notice period."
+  },
+  {
+    "rank": 24,
+    "candidate_id": "CAND_0042029",
+    "name": "Dhruv Joshi",
+    "title": "Senior Data Scientist",
+    "years": 6.5,
+    "score": "0.6578",
+    "reasoning": "Senior Data Scientist with 6.5 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: PyTorch, NLP, Statistical Modeling; concern: not marked open to work."
+  },
+  {
+    "rank": 25,
+    "candidate_id": "CAND_0018499",
+    "name": "Aarav Trivedi",
+    "title": "Senior Machine Learning Engineer",
+    "years": 7.2,
+    "score": "0.6431",
+    "reasoning": "Senior Machine Learning Engineer with 7.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Deep Learning, Milvus."
+  },
+  {
+    "rank": 26,
+    "candidate_id": "CAND_0051004",
+    "name": "Vivaan Arora",
+    "title": "Senior Data Scientist",
+    "years": 4.7,
+    "score": "0.6279",
+    "reasoning": "Senior Data Scientist with 4.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: PyTorch, Docker, MLOps."
+  },
+  {
+    "rank": 27,
+    "candidate_id": "CAND_0081846",
+    "name": "Arjun Khanna",
+    "title": "Lead AI Engineer",
+    "years": 6.7,
+    "score": "0.6279",
+    "reasoning": "Lead AI Engineer with 6.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: PyTorch, Deep Learning, Python."
+  },
+  {
+    "rank": 28,
+    "candidate_id": "CAND_0015578",
+    "name": "Ved Singh",
+    "title": "AI Engineer",
+    "years": 5.4,
+    "score": "0.6276",
+    "reasoning": "AI Engineer with 5.4 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: NLP, Kafka, Machine Learning."
+  },
+  {
+    "rank": 29,
+    "candidate_id": "CAND_0039383",
+    "name": "Riya Malhotra",
+    "title": "Applied ML Engineer",
+    "years": 7.1,
+    "score": "0.5797",
+    "reasoning": "Applied ML Engineer with 7.1 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Feature Engineering, NLP, LoRA."
+  },
+  {
+    "rank": 30,
+    "candidate_id": "CAND_0011432",
+    "name": "Deepak Trivedi",
+    "title": "Senior Data Scientist",
+    "years": 7.6,
+    "score": "0.5756",
+    "reasoning": "Senior Data Scientist with 7.6 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: MLOps, AWS, Machine Learning."
+  },
+  {
+    "rank": 31,
+    "candidate_id": "CAND_0081053",
+    "name": "Om Chopra",
+    "title": "NLP Engineer",
+    "years": 5.4,
+    "score": "0.5502",
+    "reasoning": "NLP Engineer with 5.4 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, Machine Learning."
+  },
+  {
+    "rank": 32,
+    "candidate_id": "CAND_0091745",
+    "name": "Karan Agarwal",
+    "title": "Junior ML Engineer",
+    "years": 5.9,
+    "score": "0.5482",
+    "reasoning": "Junior ML Engineer with 5.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Deep Learning, Fine-tuning LLMs, Machine Learning; concern: not marked open to work."
+  },
+  {
+    "rank": 33,
+    "candidate_id": "CAND_0008978",
+    "name": "Dev Pandey",
+    "title": "Junior ML Engineer",
+    "years": 6.7,
+    "score": "0.5459",
+    "reasoning": "Junior ML Engineer with 6.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Machine Learning, Feature Engineering, NLP; concern: not marked open to work."
+  },
+  {
+    "rank": 34,
+    "candidate_id": "CAND_0055139",
+    "name": "Rajesh Subramanian",
+    "title": "ML Engineer",
+    "years": 6.9,
+    "score": "0.544",
+    "reasoning": "ML Engineer with 6.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Statistical Modeling, Python, Deep Learning; concern: 120-day notice period."
+  },
+  {
+    "rank": 35,
+    "candidate_id": "CAND_0072688",
+    "name": "Rajesh Goyal",
+    "title": "Data Scientist",
+    "years": 6.9,
+    "score": "0.5396",
+    "reasoning": "Data Scientist with 6.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Milvus, Deep Learning, LoRA."
+  },
+  {
+    "rank": 36,
+    "candidate_id": "CAND_0002025",
+    "name": "Ira Dalal",
+    "title": "Senior AI Engineer",
+    "years": 5.9,
+    "score": "0.5349",
+    "reasoning": "Senior AI Engineer with 5.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: TensorFlow, NLP, Deep Learning."
+  },
+  {
+    "rank": 37,
+    "candidate_id": "CAND_0005538",
+    "name": "Aryan Goyal",
+    "title": "Senior AI Engineer",
+    "years": 5.9,
+    "score": "0.5349",
+    "reasoning": "Senior AI Engineer with 5.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Deep Learning, Feature Engineering, Statistical Modeling."
+  },
+  {
+    "rank": 38,
+    "candidate_id": "CAND_0011687",
+    "name": "Shreya Tiwari",
+    "title": "Senior NLP Engineer",
+    "years": 7.8,
+    "score": "0.5349",
+    "reasoning": "Senior NLP Engineer with 7.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: TensorFlow, Feature Engineering, MLOps."
+  },
+  {
+    "rank": 39,
+    "candidate_id": "CAND_0014440",
+    "name": "Ananya Singh",
+    "title": "Recommendation Systems Engineer",
+    "years": 6.4,
+    "score": "0.5349",
+    "reasoning": "Recommendation Systems Engineer with 6.4 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Milvus, Machine Learning, Feature Engineering."
+  },
+  {
+    "rank": 40,
+    "candidate_id": "CAND_0042100",
+    "name": "Siya Trivedi",
+    "title": "Machine Learning Engineer",
+    "years": 7.3,
+    "score": "0.5349",
+    "reasoning": "Machine Learning Engineer with 7.3 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Statistical Modeling, Fine-tuning LLMs, PyTorch."
+  },
+  {
+    "rank": 41,
+    "candidate_id": "CAND_0044222",
+    "name": "Dev Shah",
+    "title": "AI Engineer",
+    "years": 7.7,
+    "score": "0.5349",
+    "reasoning": "AI Engineer with 7.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Feature Engineering, NLP, Deep Learning."
+  },
+  {
+    "rank": 42,
+    "candidate_id": "CAND_0052682",
+    "name": "Ira Mukherjee",
+    "title": "NLP Engineer",
+    "years": 6.6,
+    "score": "0.5349",
+    "reasoning": "NLP Engineer with 6.6 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Statistical Modeling, PyTorch, Python."
+  },
+  {
+    "rank": 43,
+    "candidate_id": "CAND_0064326",
+    "name": "Nisha Pillai",
+    "title": "Search Engineer",
+    "years": 7.6,
+    "score": "0.5349",
+    "reasoning": "Search Engineer with 7.6 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: PyTorch, Milvus, Deep Learning."
+  },
+  {
+    "rank": 44,
+    "candidate_id": "CAND_0071974",
+    "name": "Sai Verma",
+    "title": "Senior AI Engineer",
+    "years": 7.8,
+    "score": "0.5349",
+    "reasoning": "Senior AI Engineer with 7.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, Machine Learning, MLOps."
+  },
+  {
+    "rank": 45,
+    "candidate_id": "CAND_0076163",
+    "name": "Nikhil Mittal",
+    "title": "NLP Engineer",
+    "years": 6.9,
+    "score": "0.5349",
+    "reasoning": "NLP Engineer with 6.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Statistical Modeling, PyTorch, Python."
+  },
+  {
+    "rank": 46,
+    "candidate_id": "CAND_0078002",
+    "name": "Reyansh Sharma",
+    "title": "Machine Learning Engineer",
+    "years": 6.3,
+    "score": "0.5349",
+    "reasoning": "Machine Learning Engineer with 6.3 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Statistical Modeling, TensorFlow, NLP."
+  },
+  {
+    "rank": 47,
+    "candidate_id": "CAND_0088025",
+    "name": "Amit Arora",
+    "title": "Staff Machine Learning Engineer",
+    "years": 8.6,
+    "score": "0.5349",
+    "reasoning": "Staff Machine Learning Engineer with 8.6 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: TensorFlow, LoRA, MLOps."
+  },
+  {
+    "rank": 48,
+    "candidate_id": "CAND_0010603",
+    "name": "Aisha Desai",
+    "title": "ML Engineer",
+    "years": 5.3,
+    "score": "0.5326",
+    "reasoning": "ML Engineer with 5.3 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Docker, Azure, Deep Learning."
+  },
+  {
+    "rank": 49,
+    "candidate_id": "CAND_0061257",
+    "name": "Advaith Pillai",
+    "title": "Staff Machine Learning Engineer",
+    "years": 8.0,
+    "score": "0.5302",
+    "reasoning": "Staff Machine Learning Engineer with 8.0 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Machine Learning, Feature Engineering, Python."
+  },
+  {
+    "rank": 50,
+    "candidate_id": "CAND_0098846",
+    "name": "Shreya Saxena",
+    "title": "AI Engineer",
+    "years": 7.6,
+    "score": "0.5273",
+    "reasoning": "AI Engineer with 7.6 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Machine Learning, MLOps, TensorFlow."
+  },
+  {
+    "rank": 51,
+    "candidate_id": "CAND_0030348",
+    "name": "Om Mishra",
+    "title": "Machine Learning Engineer",
+    "years": 4.5,
+    "score": "0.5066",
+    "reasoning": "Machine Learning Engineer with 4.5 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Deep Learning, MLOps, PyTorch."
+  },
+  {
+    "rank": 52,
+    "candidate_id": "CAND_0009691",
+    "name": "Ira Subramanian",
+    "title": "Applied ML Engineer",
+    "years": 6.2,
+    "score": "0.4992",
+    "reasoning": "Applied ML Engineer with 6.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Fine-tuning LLMs, LoRA; concern: 120-day notice period."
+  },
+  {
+    "rank": 53,
+    "candidate_id": "CAND_0079064",
+    "name": "Sai Saxena",
+    "title": "Senior Data Scientist",
+    "years": 5.2,
+    "score": "0.4848",
+    "reasoning": "Senior Data Scientist with 5.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: NLP, Fine-tuning LLMs; concern: 120-day notice period."
+  },
+  {
+    "rank": 54,
+    "candidate_id": "CAND_0095528",
+    "name": "Amit Dalal",
+    "title": "Senior Data Scientist",
+    "years": 5.3,
+    "score": "0.4649",
+    "reasoning": "Senior Data Scientist with 5.3 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Feature Engineering, PyTorch, Fine-tuning LLMs."
+  },
+  {
+    "rank": 55,
+    "candidate_id": "CAND_0070398",
+    "name": "Riya Saxena",
+    "title": "Machine Learning Engineer",
+    "years": 7.2,
+    "score": "0.4622",
+    "reasoning": "Machine Learning Engineer with 7.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: PyTorch, LoRA, Python; concern: 120-day notice period."
+  },
+  {
+    "rank": 56,
+    "candidate_id": "CAND_0075249",
+    "name": "Ishaan Arora",
+    "title": "Applied ML Engineer",
+    "years": 6.2,
+    "score": "0.4582",
+    "reasoning": "Applied ML Engineer with 6.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Milvus, Machine Learning, Fine-tuning LLMs."
+  },
+  {
+    "rank": 57,
+    "candidate_id": "CAND_0080766",
+    "name": "Kiara Mittal",
+    "title": "Staff Machine Learning Engineer",
+    "years": 8.8,
+    "score": "0.4518",
+    "reasoning": "Staff Machine Learning Engineer with 8.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, MLOps, Deep Learning; concern: not marked open to work."
+  },
+  {
+    "rank": 58,
+    "candidate_id": "CAND_0074123",
+    "name": "Karan Sen",
+    "title": "Data Scientist",
+    "years": 6.9,
+    "score": "0.4469",
+    "reasoning": "Data Scientist with 6.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: NLP, PyTorch, Deep Learning."
+  },
+  {
+    "rank": 59,
+    "candidate_id": "CAND_0052335",
+    "name": "Vivaan Sen",
+    "title": "Applied ML Engineer",
+    "years": 6.4,
+    "score": "0.4451",
+    "reasoning": "Applied ML Engineer with 6.4 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: PyTorch, Machine Learning, NLP."
+  },
+  {
+    "rank": 60,
+    "candidate_id": "CAND_0040200",
+    "name": "Meera Mittal",
+    "title": "AI Research Engineer",
+    "years": 5.5,
+    "score": "0.4417",
+    "reasoning": "AI Research Engineer with 5.5 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: NLP, Milvus, Airflow."
+  },
+  {
+    "rank": 61,
+    "candidate_id": "CAND_0009024",
+    "name": "Avni Sharma",
+    "title": "Search Engineer",
+    "years": 5.2,
+    "score": "0.4302",
+    "reasoning": "Search Engineer with 5.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Machine Learning, Airflow, PyTorch."
+  },
+  {
+    "rank": 62,
+    "candidate_id": "CAND_0033987",
+    "name": "Atharv Bose",
+    "title": "ML Engineer",
+    "years": 6.8,
+    "score": "0.4281",
+    "reasoning": "ML Engineer with 6.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Feature Engineering, Deep Learning, Fine-tuning LLMs."
+  },
+  {
+    "rank": 63,
+    "candidate_id": "CAND_0024990",
+    "name": "Aarav Mehta",
+    "title": "Junior ML Engineer",
+    "years": 5.2,
+    "score": "0.414",
+    "reasoning": "Junior ML Engineer with 5.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: NLP, Kafka, Milvus."
+  },
+  {
+    "rank": 64,
+    "candidate_id": "CAND_0050876",
+    "name": "Vivaan Shah",
+    "title": "Applied ML Engineer",
+    "years": 6.0,
+    "score": "0.414",
+    "reasoning": "Applied ML Engineer with 6.0 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: SQL, MLOps, Machine Learning."
+  },
+  {
+    "rank": 65,
+    "candidate_id": "CAND_0008425",
+    "name": "Myra Krishnan",
+    "title": "Senior NLP Engineer",
+    "years": 7.8,
+    "score": "0.4133",
+    "reasoning": "Senior NLP Engineer with 7.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: NLP, TensorFlow, Python."
+  },
+  {
+    "rank": 66,
+    "candidate_id": "CAND_0094056",
+    "name": "Diya Pillai",
+    "title": "NLP Engineer",
+    "years": 5.9,
+    "score": "0.4037",
+    "reasoning": "NLP Engineer with 5.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Milvus, SQL, Fine-tuning LLMs; concern: not marked open to work; 120-day notice period."
+  },
+  {
+    "rank": 67,
+    "candidate_id": "CAND_0065878",
+    "name": "Suresh Kapoor",
+    "title": "Senior Data Scientist",
+    "years": 7.8,
+    "score": "0.4015",
+    "reasoning": "Senior Data Scientist with 7.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: TensorFlow, Fine-tuning LLMs, Machine Learning."
+  },
+  {
+    "rank": 68,
+    "candidate_id": "CAND_0064904",
+    "name": "Karan Trivedi",
+    "title": "AI Engineer",
+    "years": 4.9,
+    "score": "0.3765",
+    "reasoning": "AI Engineer with 4.9 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Python, MLOps, TensorFlow."
+  },
+  {
+    "rank": 69,
+    "candidate_id": "CAND_0030031",
+    "name": "Anil Joshi",
+    "title": "AI Engineer",
+    "years": 5.7,
+    "score": "0.3754",
+    "reasoning": "AI Engineer with 5.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: PyTorch, Python, NLP; concern: not marked open to work."
+  },
+  {
+    "rank": 70,
+    "candidate_id": "CAND_0027801",
+    "name": "Anil Mittal",
+    "title": "NLP Engineer",
+    "years": 7.4,
+    "score": "0.3724",
+    "reasoning": "NLP Engineer with 7.4 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Milvus, TensorFlow, MLOps; concern: 120-day notice period."
+  },
+  {
+    "rank": 71,
+    "candidate_id": "CAND_0045250",
+    "name": "Priya Pandey",
+    "title": "Applied ML Engineer",
+    "years": 6.6,
+    "score": "0.368",
+    "reasoning": "Applied ML Engineer with 6.6 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Milvus, LoRA, NLP; concern: not marked open to work."
+  },
+  {
+    "rank": 72,
+    "candidate_id": "CAND_0047721",
+    "name": "Om Verma",
+    "title": "Senior Data Scientist",
+    "years": 7.0,
+    "score": "0.3651",
+    "reasoning": "Senior Data Scientist with 7.0 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: MLOps, Milvus, Machine Learning; concern: not marked open to work."
+  },
+  {
+    "rank": 73,
+    "candidate_id": "CAND_0049538",
+    "name": "Sanjay Bose",
+    "title": "Applied ML Engineer",
+    "years": 5.8,
+    "score": "0.3648",
+    "reasoning": "Applied ML Engineer with 5.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Feature Engineering, Milvus, Deep Learning; concern: not marked open to work."
+  },
+  {
+    "rank": 74,
+    "candidate_id": "CAND_0057563",
+    "name": "Om Trivedi",
+    "title": "NLP Engineer",
+    "years": 6.8,
+    "score": "0.3619",
+    "reasoning": "NLP Engineer with 6.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Deep Learning, Feature Engineering, SQL; concern: not marked open to work."
+  },
+  {
+    "rank": 75,
+    "candidate_id": "CAND_0058688",
+    "name": "Anjali Kapoor",
+    "title": "AI Engineer",
+    "years": 6.7,
+    "score": "0.3555",
+    "reasoning": "AI Engineer with 6.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: TensorFlow, Milvus, Machine Learning."
+  },
+  {
+    "rank": 76,
+    "candidate_id": "CAND_0041610",
+    "name": "Anil Subramanian",
+    "title": "Recommendation Systems Engineer",
+    "years": 6.7,
+    "score": "0.3488",
+    "reasoning": "Recommendation Systems Engineer with 6.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, Statistical Modeling, Feature Engineering."
+  },
+  {
+    "rank": 77,
+    "candidate_id": "CAND_0074225",
+    "name": "Kabir Agarwal",
+    "title": "Machine Learning Engineer",
+    "years": 4.3,
+    "score": "0.3488",
+    "reasoning": "Machine Learning Engineer with 4.3 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Statistical Modeling, Milvus, Python; concern: 120-day notice period."
+  },
+  {
+    "rank": 78,
+    "candidate_id": "CAND_0044883",
+    "name": "Rajesh Reddy",
+    "title": "AI Engineer",
+    "years": 6.3,
+    "score": "0.3441",
+    "reasoning": "AI Engineer with 6.3 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Fine-tuning LLMs, TensorFlow, Deep Learning; concern: not marked open to work."
+  },
+  {
+    "rank": 79,
+    "candidate_id": "CAND_0049896",
+    "name": "Neha Vora",
+    "title": "Search Engineer",
+    "years": 7.3,
+    "score": "0.3418",
+    "reasoning": "Search Engineer with 7.3 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: PyTorch, Fine-tuning LLMs, NLP."
+  },
+  {
+    "rank": 80,
+    "candidate_id": "CAND_0015493",
+    "name": "Tanvi Shetty",
+    "title": "Data Scientist",
+    "years": 6.4,
+    "score": "0.33",
+    "reasoning": "Data Scientist with 6.4 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: TensorFlow, LoRA, AWS."
+  },
+  {
+    "rank": 81,
+    "candidate_id": "CAND_0020350",
+    "name": "Tanya Reddy",
+    "title": "AI Engineer",
+    "years": 5.8,
+    "score": "0.3287",
+    "reasoning": "AI Engineer with 5.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: MLOps, NLP, LoRA."
+  },
+  {
+    "rank": 82,
+    "candidate_id": "CAND_0000031",
+    "name": "Ela Singh",
+    "title": "Recommendation Systems Engineer",
+    "years": 6.0,
+    "score": "0.3285",
+    "reasoning": "Recommendation Systems Engineer with 6.0 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Machine Learning, MLOps, Feature Engineering."
+  },
+  {
+    "rank": 83,
+    "candidate_id": "CAND_0044855",
+    "name": "Kavya Joshi",
+    "title": "Senior Data Scientist",
+    "years": 6.6,
+    "score": "0.3219",
+    "reasoning": "Senior Data Scientist with 6.6 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Machine Learning, NLP, Statistical Modeling; concern: not marked open to work."
+  },
+  {
+    "rank": 84,
+    "candidate_id": "CAND_0008517",
+    "name": "Amit Chowdary",
+    "title": "AI Research Engineer",
+    "years": 5.6,
+    "score": "0.3069",
+    "reasoning": "AI Research Engineer with 5.6 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Feature Engineering, LoRA, MLOps; concern: 120-day notice period."
+  },
+  {
+    "rank": 85,
+    "candidate_id": "CAND_0094759",
+    "name": "Aditya Pillai",
+    "title": "Lead AI Engineer",
+    "years": 8.6,
+    "score": "0.3007",
+    "reasoning": "Lead AI Engineer with 8.6 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Fine-tuning LLMs, NLP, MLOps; concern: not marked open to work."
+  },
+  {
+    "rank": 86,
+    "candidate_id": "CAND_0072232",
+    "name": "Anika Mittal",
+    "title": "ML Engineer",
+    "years": 4.0,
+    "score": "0.2993",
+    "reasoning": "ML Engineer with 4.0 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: TensorFlow, Statistical Modeling, Azure."
+  },
+  {
+    "rank": 87,
+    "candidate_id": "CAND_0043228",
+    "name": "Kiara Sen",
+    "title": "Applied ML Engineer",
+    "years": 6.8,
+    "score": "0.2971",
+    "reasoning": "Applied ML Engineer with 6.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: NLP, Machine Learning; concern: not marked open to work."
+  },
+  {
+    "rank": 88,
+    "candidate_id": "CAND_0007596",
+    "name": "Shaurya Gupta",
+    "title": "Junior ML Engineer",
+    "years": 4.4,
+    "score": "0.2907",
+    "reasoning": "Junior ML Engineer with 4.4 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Machine Learning, Feature Engineering, Statistical Modeling."
+  },
+  {
+    "rank": 89,
+    "candidate_id": "CAND_0061175",
+    "name": "Reyansh Chatterjee",
+    "title": "AI Research Engineer",
+    "years": 6.7,
+    "score": "0.2722",
+    "reasoning": "AI Research Engineer with 6.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Python, Milvus, Azure; concern: 120-day notice period."
+  },
+  {
+    "rank": 90,
+    "candidate_id": "CAND_0018094",
+    "name": "Pranav Mehta",
+    "title": "ML Engineer",
+    "years": 5.2,
+    "score": "0.2609",
+    "reasoning": "ML Engineer with 5.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Feature Engineering, Fine-tuning LLMs, Kubernetes."
+  },
+  {
+    "rank": 91,
+    "candidate_id": "CAND_0007412",
+    "name": "Pranav Shah",
+    "title": "Applied ML Engineer",
+    "years": 7.4,
+    "score": "0.2601",
+    "reasoning": "Applied ML Engineer with 7.4 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Milvus, PyTorch; concern: 120-day notice period."
+  },
+  {
+    "rank": 92,
+    "candidate_id": "CAND_0072660",
+    "name": "Aarohi Sen",
+    "title": "Machine Learning Engineer",
+    "years": 7.1,
+    "score": "0.2558",
+    "reasoning": "Machine Learning Engineer with 7.1 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Feature Engineering, LoRA, PyTorch."
+  },
+  {
+    "rank": 93,
+    "candidate_id": "CAND_0077285",
+    "name": "Priya Chowdary",
+    "title": "Recommendation Systems Engineer",
+    "years": 5.5,
+    "score": "0.2558",
+    "reasoning": "Recommendation Systems Engineer with 5.5 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, Fine-tuning LLMs, Milvus."
+  },
+  {
+    "rank": 94,
+    "candidate_id": "CAND_0051292",
+    "name": "Shreya Chatterjee",
+    "title": "Applied ML Engineer",
+    "years": 5.2,
+    "score": "0.2518",
+    "reasoning": "Applied ML Engineer with 5.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Fine-tuning LLMs, NLP."
+  },
+  {
+    "rank": 95,
+    "candidate_id": "CAND_0025882",
+    "name": "Pooja Arora",
+    "title": "Senior Software Engineer (ML)",
+    "years": 5.6,
+    "score": "0.2476",
+    "reasoning": "Senior Software Engineer (ML) with 5.6 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: Feature Engineering, Azure, LoRA."
+  },
+  {
+    "rank": 96,
+    "candidate_id": "CAND_0028793",
+    "name": "Myra Dutta",
+    "title": "Search Engineer",
+    "years": 7.2,
+    "score": "0.2433",
+    "reasoning": "Search Engineer with 7.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, PyTorch, NLP; concern: 120-day notice period."
+  },
+  {
+    "rank": 97,
+    "candidate_id": "CAND_0011162",
+    "name": "Nisha Sharma",
+    "title": "Recommendation Systems Engineer",
+    "years": 5.8,
+    "score": "0.2379",
+    "reasoning": "Recommendation Systems Engineer with 5.8 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, Milvus, Python."
+  },
+  {
+    "rank": 98,
+    "candidate_id": "CAND_0087630",
+    "name": "Aisha Rao",
+    "title": "AI Engineer",
+    "years": 7.2,
+    "score": "0.2366",
+    "reasoning": "AI Engineer with 7.2 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: NLP, Deep Learning, Feature Engineering; concern: not marked open to work."
+  },
+  {
+    "rank": 99,
+    "candidate_id": "CAND_0007460",
+    "name": "Anika Sethi",
+    "title": "AI Engineer",
+    "years": 4.7,
+    "score": "0.2218",
+    "reasoning": "AI Engineer with 4.7 years of experience; direct AI/ML title fit; career evidence of ranking/retrieval or production ML systems; relevant skills: LoRA, Airflow, NLP; concern: 120-day notice period."
+  },
+  {
+    "rank": 100,
+    "candidate_id": "CAND_0005193",
+    "name": "Vihaan Naidu",
+    "title": "Senior Software Engineer",
+    "years": 6.2,
+    "score": "0.2",
+    "reasoning": "Senior Software Engineer with 6.2 years of experience; adjacent engineering background; career evidence of ranking/retrieval or production ML systems; relevant skills: PyTorch, MLOps, Statistical Modeling."
+  }
+]

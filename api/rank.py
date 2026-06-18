@@ -10,6 +10,7 @@ from main import normalize_scores, reasoning, score_candidate
 ROOT = Path(__file__).resolve().parents[1]
 SAMPLE_PATH = ROOT / "data" / "sample_candidates.json"
 SUBMISSION_PATH = ROOT / "outputs" / "submission.csv"
+TOP100_DEMO_PATH = ROOT / "outputs" / "top100_demo.json"
 
 
 def load_sample_candidates():
@@ -52,6 +53,18 @@ def build_sample_response(limit):
 
 
 def build_submission_response():
+    if TOP100_DEMO_PATH.exists():
+        with open(TOP100_DEMO_PATH, "r", encoding="utf-8") as handle:
+            results = json.load(handle)
+        results.sort(key=lambda row: row["rank"])
+        return {
+            "message": "Final validated top-100 submission with demo display metadata",
+            "source": "submission",
+            "candidate_count": 100000,
+            "display_count": len(results),
+            "results": results,
+        }
+
     results = []
     with open(SUBMISSION_PATH, "r", encoding="utf-8", newline="") as handle:
         reader = csv.DictReader(handle)
