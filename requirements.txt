@@ -1,8 +1,1 @@
-sentence-transformers
-torch
-transformers
-scikit-learn
-pandas
 python-docx
-pyyaml
-numpy   

@@ -7,8 +7,8 @@ def calculate_final_score(
 ):
 
     final_score = (
-        semantic * 40 +
-        (skill / 100) * 20 +
+        semantic * 35 +
+        (skill / 100) * 25 +
         (experience / 100) * 10 +
         (behavior / 100) * 15 +
         (production / 100) * 15

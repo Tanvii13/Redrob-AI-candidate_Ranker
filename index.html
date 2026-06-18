@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redrob Candidate Ranker Sandbox</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1f2933;
+        background: #f5f7fb;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 18px 48px;
+      }
+
+      header {
+        margin-bottom: 22px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 30px;
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 24px 0;
+      }
+
+      button {
+        border: 0;
+        border-radius: 6px;
+        padding: 10px 14px;
+        font-weight: 700;
+        color: #ffffff;
+        background: #1769aa;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        opacity: 0.7;
+        cursor: wait;
+      }
+
+      .status {
+        color: #52616b;
+        font-size: 14px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #ffffff;
+        border: 1px solid #d9e2ec;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #e6edf3;
+        text-align: left;
+        vertical-align: top;
+        font-size: 14px;
+      }
+
+      th {
+        background: #edf2f7;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .rank {
+        width: 56px;
+        font-weight: 700;
+      }
+
+      .score {
+        width: 80px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .candidate {
+        min-width: 180px;
+      }
+
+      .note {
+        margin-top: 16px;
+        color: #52616b;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Redrob Candidate Ranker Sandbox</h1>
+        <p>
+          Lightweight hosted demo for the Redrob hackathon ranker. This Vercel
+          sandbox runs on the provided sample candidates; the full submission is
+          produced locally with <code>python main.py</code> on all 100,000 candidates.
+        </p>
+      </header>
+
+      <section class="toolbar">
+        <button id="runButton" type="button">Run Sample Ranking</button>
+        <span id="status" class="status">Ready</span>
+      </section>
+
+      <table>
+        <thead>
+          <tr>
+            <th class="rank">Rank</th>
+            <th class="candidate">Candidate</th>
+            <th class="score">Score</th>
+            <th>Reasoning</th>
+          </tr>
+        </thead>
+        <tbody id="results">
+          <tr>
+            <td colspan="4">Click Run Sample Ranking to load results.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="note">
+        The hosted demo intentionally uses the small sample file so it stays fast
+        and portable. The repository README contains the exact full-data
+        reproduction command.
+      </p>
+    </main>
+
+    <script>
+      const button = document.getElementById("runButton");
+      const statusEl = document.getElementById("status");
+      const resultsEl = document.getElementById("results");
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      function renderRows(rows) {
+        resultsEl.innerHTML = rows.map((row) => `
+          <tr>
+            <td class="rank">${row.rank}</td>
+            <td class="candidate">
+              <strong>${escapeHtml(row.name)}</strong><br>
+              ${escapeHtml(row.candidate_id)}
+            </td>
+            <td class="score">${row.score}</td>
+            <td>${escapeHtml(row.reasoning)}</td>
+          </tr>
+        `).join("");
+      }
+
+      button.addEventListener("click", async () => {
+        button.disabled = true;
+        statusEl.textContent = "Running sample ranker...";
+        resultsEl.innerHTML = '<tr><td colspan="4">Loading...</td></tr>';
+
+        try {
+          const response = await fetch("/api/rank");
+          if (!response.ok) {
+            throw new Error(`Request failed: ${response.status}`);
+          }
+          const data = await response.json();
+          renderRows(data.results);
+          statusEl.textContent = `Ranked ${data.candidate_count} sample candidates.`;
+        } catch (error) {
+          statusEl.textContent = "Could not run sandbox.";
+          resultsEl.innerHTML = `<tr><td colspan="4">${escapeHtml(error.message)}</td></tr>`;
+        } finally {
+          button.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

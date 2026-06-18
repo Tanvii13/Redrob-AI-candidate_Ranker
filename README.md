@@ -1,125 +1,97 @@
-# 🤖 Redrob AI Candidate Ranker
+# Redrob AI Candidate Ranker
 
-An AI-powered candidate discovery and ranking system built for the **Redrob Intelligent Candidate Discovery & Ranking Challenge**.
+This repository contains a fast, local candidate ranking system for the Redrob Intelligent Candidate Discovery & Ranking Challenge.
 
----
+The ranker produces the required top-100 CSV:
 
-## Overview
+```text
+candidate_id,rank,score,reasoning
+```
 
-This project automatically ranks candidates by combining semantic AI matching with skill, experience, behavioral, and production engineering scoring.
+## Approach
 
-Instead of relying only on keyword matching, the system understands the meaning of the candidate profile using Sentence Transformers and produces a weighted final score.
+The challenge JD asks for a Senior AI Engineer for a founding team. The system ranks candidates using a deterministic hybrid score instead of slow per-candidate LLM calls.
 
----
+It considers:
 
-## Features
+- AI/ML and adjacent engineering title fit
+- Career evidence of retrieval, ranking, recommendation, search, LLM, evaluation, and production ML systems
+- Relevant skill strength using proficiency, duration, endorsements, and assessment scores
+- Experience fit, with 5-9 years preferred
+- Behavioral/availability signals such as open-to-work, last active date, recruiter response rate, interview completion, saved-by-recruiters, verification, and notice period
+- Location fit for Pune/Noida/hybrid and relocation
+- Consistency penalties for likely honeypot or keyword-stuffed profiles
 
-* Semantic similarity matching using Sentence Transformers
-* AI skill matching
-* Experience scoring
-* Behavioral scoring
-* Production pipeline experience scoring
-* Weighted candidate ranking
-* Automatic CSV export
-
----
-
-## Tech Stack
-
-* Python
-* Sentence Transformers
-* HuggingFace Transformers
-* Scikit-learn
-* Pandas
-* NumPy
-* python-docx
-
----
-
-## Ranking Strategy
-
-| Metric                | Weight |
-| --------------------- | ------ |
-| Semantic Matching     | 40%    |
-| Skill Score           | 20%    |
-| Experience Score      | 10%    |
-| Behavioral Score      | 15%    |
-| Production Experience | 15%    |
-
----
+The ranking step is CPU-only, local, deterministic, and does not call hosted APIs or download models.
 
 ## Project Structure
 
 ```text
 Redrob-AI-candidate_Ranker/
-
-├── data/
-├── outputs/
-├── src/
-│   ├── semantic_ranker.py
-│   ├── skill_matcher.py
-│   ├── experience_matcher.py
-│   ├── production_matcher.py
-│   ├── behavior_ranker.py
-│   ├── final_ranker.py
-│   ├── text_builder.py
-│   └── job_loader.py
-│
-├── main.py
-├── requirements.txt
-└── README.md
+  data/
+    candidates.jsonl
+    job_description.docx
+    validate_submission.py
+  outputs/
+    submission.csv
+    ranked_candidates.csv
+  main.py
+  requirements.txt
+  README.md
 ```
 
----
+## Setup
 
-## Installation
-
-```bash
+```powershell
+cd "C:\Users\tanvi\Desktop\vs_code\Redrob-AI-candidate_Ranker"
+python -m venv venv
+.\venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
----
-
 ## Run
 
-```bash
+```powershell
 python main.py
 ```
 
----
+This writes:
 
-## Output
-
-The system generates:
-
-```
+```text
+outputs/submission.csv
 outputs/ranked_candidates.csv
 ```
 
-containing:
+You can also run with explicit paths:
 
-* Candidate ID
-* Candidate Name
-* Semantic Score
-* Skill Score
-* Experience Score
-* Production Score
-* Behavioral Score
-* Final Score
+```powershell
+python main.py --candidates data/candidates.jsonl --job data/job_description.docx --out outputs/submission.csv
+```
 
----
+## Validate
 
-## Future Improvements
+```powershell
+python data\validate_submission.py outputs\submission.csv
+```
 
-* Resume PDF parsing
-* LLM-based skill extraction
-* Explainable AI ranking
-* Dynamic scoring configuration
-* REST API deployment
-* Streamlit dashboard
+Expected output:
 
----
+```text
+Submission is valid.
+```
 
-## Author
+## Vercel Sandbox
 
-Tanvi
+This repo also includes a lightweight Vercel sandbox:
+
+- `index.html` shows a simple demo UI.
+- `api/rank.py` ranks `data/sample_candidates.json`.
+- The sandbox is for reviewer/demo use only; the full submission is still produced locally with `python main.py`.
+
+Deploy the same GitHub repo to Vercel, then use the Vercel project URL as the `sandbox_link` in `submission_metadata.yaml`.
+
+## Notes
+
+- The organizer-provided files are used as inputs only.
+- The final upload CSV should be renamed to your registered participant/team ID if the portal requires that filename.
+- The sample submission is only a format example and is not used for ranking.

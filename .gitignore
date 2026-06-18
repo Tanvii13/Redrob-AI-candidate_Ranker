@@ -2,19 +2,15 @@ venv/
 __pycache__/
 *.pyc
 
+data/candidates.jsonl
 outputs/
 *.csv
 
 .env
-
 .idea/
 .vscode/
-
 .DS_Store
-
 *.log
-
 *.pt
 *.bin
-
 .cache/

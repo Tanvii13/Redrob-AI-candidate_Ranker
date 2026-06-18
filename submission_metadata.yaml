@@ -1,0 +1,51 @@
+team_name: "Titans"
+
+primary_contact:
+  name: "Tanvi Nakum"
+  email: "tanvinakum79@gmail.com"
+  phone: "+91-7383733068"
+
+team_members:
+  - name: "Tanvi Nakum"
+    email: "tanvinakum79@gmail.com"
+    role: "Developer"
+
+github_repo: "https://github.com/Tanvii13/Redrob-AI-candidate_Ranker"
+sandbox_link: "TODO: paste your Vercel deployment URL here"
+
+reproduce_command: "python main.py --candidates ./data/candidates.jsonl --job ./data/job_description.docx --out ./outputs/submission.csv"
+
+compute:
+  platform: "Local Windows machine"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.14"
+  os: "Windows"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Codex"
+
+ai_usage_summary: |
+  Used Codex for code review, debugging, and implementation guidance.
+  The final ranking step is local and deterministic. No hosted LLM or API is
+  called during candidate ranking.
+
+methodology_summary: |
+  Fast local hybrid ranker for the Senior AI Engineer JD. The score combines
+  AI/ML title fit, career evidence of retrieval/ranking/recommendation/search,
+  production ML and product engineering systems, relevant skill strength,
+  experience fit, behavioral availability signals, location/relocation fit,
+  and consistency penalties for likely honeypot or keyword-stuffed profiles.
+  The system avoids per-candidate LLM calls and model downloads so the
+  ranking step runs on CPU within the challenge limit.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
