@@ -1,4 +1,5 @@
 import json
+from http.server import BaseHTTPRequestHandler
 from pathlib import Path
 
 from main import normalize_scores, reasoning, score_candidate
@@ -13,7 +14,7 @@ def load_sample_candidates():
         return json.load(handle)
 
 
-def handler(request):
+def build_response():
     candidates = load_sample_candidates()
     scored = []
     kept_candidates = {}
@@ -37,10 +38,18 @@ def handler(request):
             "reasoning": reasoning(candidate, row),
         })
 
-    body = json.dumps({
+    return {
         "message": "Redrob ranker sandbox using sample_candidates.json",
         "candidate_count": len(candidates),
         "results": results,
-    })
+    }
 
-    return body, 200, {"content-type": "application/json; charset=utf-8"}
+
+class handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        body = json.dumps(build_response()).encode("utf-8")
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
