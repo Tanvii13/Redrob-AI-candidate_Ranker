@@ -287,6 +287,10 @@ The sandbox demonstrates:
 
 A smaller sample dataset is used for demonstration purposes.
 
+![Redrob AI Candidate Ranker](Redrob_AI_Candidate_Ranker.png)
+
+Top 100 Ranked Candidates
+Candidate Reasoning Explore
 ---
 
 # Compute Environment
