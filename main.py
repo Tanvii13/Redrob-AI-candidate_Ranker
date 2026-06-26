@@ -556,7 +556,7 @@ def normalize_scores(ranked):
         scaled = 0.2 + 0.8 * ((row["score"] - min_score) / spread)
         row = dict(row)
         scaled -= (len(normalized) * 0.00001)
-        row["normalized_score"] = round(scaled, 4)
+        row["normalized_score"] = round(scaled, 6)
         normalized.append(row)
 
     return normalized
