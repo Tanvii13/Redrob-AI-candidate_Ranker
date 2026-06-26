@@ -151,29 +151,7 @@ This reduces keyword-stuffing and improves ranking quality.
 
 # Ranking Pipeline
 
-Candidate Profile
-        ↓
-Profile Parsing
-        ↓
-Title Analysis
-        ↓
-Career Evidence Analysis
-        ↓
-Skill Scoring
-        ↓
-Experience Scoring
-        ↓
-Behavioral Scoring
-        ↓
-Location Scoring
-        ↓
-Honeypot Detection
-        ↓
-Final Weighted Score
-        ↓
-Top 100 Selection
-        ↓
-CSV Generation
+Candidate Profile -> Profile Parsing -> Title Analysis -> Career Evidence Analysis -> Skill Scoring -> Experience Scoring -> Behavioral Scoring -> Location Scoring -> Honeypot Detection -> Final Weighted Score -> Top 100 Selection -> CSV Generation
 
 ---
 
@@ -308,6 +286,8 @@ The sandbox demonstrates:
 - Submission generation
 
 A smaller sample dataset is used for demonstration purposes.
+
+Demo Video- <video src="Demo_video.mp4" width="100%"></video>
 
 ---
 
