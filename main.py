@@ -290,7 +290,7 @@ def skill_score(candidate, support_score):
     if expert_zero_duration >= 5:
         score *= 0.45
 
-    return clamp(score, 0, 18)
+    return score
 
 
 def experience_score(candidate):
@@ -451,8 +451,24 @@ def score_candidate(candidate):
     behavior = behavior_score(candidate)
     location = location_score(candidate)
     penalty = honeypot_penalty(candidate)
+    signals = candidate["redrob_signals"]
 
-    raw_score = title + career + skills + experience + behavior + location - penalty
+    tie_breaker = (
+        signals.get("github_activity_score", 0) * 0.001
+        + signals.get("recruiter_response_rate", 0) * 0.01
+        + signals.get("interview_completion_rate", 0) * 0.01
+    )
+
+    raw_score = (
+        title
+        + career
+        + skills
+        + experience
+        + behavior
+        + location
+        - penalty
+        + tie_breaker
+    )
     score = clamp(raw_score, 0, 100)
 
     return {
