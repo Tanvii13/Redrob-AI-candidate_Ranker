@@ -54,7 +54,7 @@ try:
     hide_index=True,
     column_config={
         "candidate_id": st.column_config.TextColumn(
-            "ID",
+            "CANDIDATE ID",
             width="small"
         ),
         "rank": st.column_config.NumberColumn(
