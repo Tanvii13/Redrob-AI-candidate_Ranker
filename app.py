@@ -47,7 +47,7 @@ try:
     # Table
     st.subheader("Top 100 Ranked Candidates")
 
-    sst.dataframe(
+    st.dataframe(
     df.head(100),
     height=700,
     width="stretch",
@@ -55,7 +55,7 @@ try:
     column_config={
         "candidate_id": st.column_config.TextColumn(
             "Candidate ID",
-            width="small"      # was medium
+            width="small"   
         ),
         "rank": st.column_config.NumberColumn(
             "Rank",
