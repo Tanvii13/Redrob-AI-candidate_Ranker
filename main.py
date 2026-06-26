@@ -57,7 +57,15 @@ STRONG_AI_TITLES = (
     "applied scientist",
     "data scientist",
     "nlp engineer",
-)
+    "search engineer",
+    "recommendation engineer",
+    "relevance engineer",
+    "ranking engineer",
+    "retrieval engineer",
+    "staff machine learning engineer",
+    "principal machine learning engineer",
+    "senior data scientist",
+    )
 
 ADJACENT_TECH_TITLES = (
     "data engineer",
@@ -105,6 +113,21 @@ SYSTEM_EVIDENCE = {
     "airflow": 1.3,
     "scale": 1.6,
     "users": 1.2,
+    "recommendation engine": 4.0,
+    "recommendation system": 4.0,
+    "matching system": 4.0,
+    "candidate matching": 4.0,
+    "ranking model": 4.0,
+    "learning to rank": 4.0,
+    "ltr": 3.0,
+    "ndcg": 4.0,
+    "mrr": 3.5,
+    "map": 3.5,
+    "a/b testing": 3.0,
+    "ab testing": 3.0,
+    "offline evaluation": 3.0,
+    "online evaluation": 3.0,
+    "relevance": 3.0,
 }
 
 PRODUCT_COMPANY_HINTS = (
@@ -133,6 +156,14 @@ TIER1_INDIAN_CITIES = (
     "gurugram",
 )
 
+CONSULTING_COMPANIES = (
+    "tcs",
+    "infosys",
+    "wipro",
+    "cognizant",
+    "accenture",
+    "capgemini"
+)
 
 def load_job_text(path):
     doc = Document(path)
@@ -264,12 +295,25 @@ def skill_score(candidate, support_score):
 
 def experience_score(candidate):
     years = float(candidate["profile"].get("years_of_experience", 0))
-    if 5 <= years <= 9:
+
+    if 6 <= years <= 8:
+        return 14
+
+    if 5 <= years < 6:
         return 12
-    if 4 <= years < 5 or 9 < years <= 11:
+
+    if 8 < years <= 9:
+        return 12
+
+    if 4 <= years < 5:
         return 8
-    if 3 <= years < 4 or 11 < years <= 13:
+
+    if 9 < years <= 11:
+        return 8
+
+    if 3 <= years < 4:
         return 4
+
     return 1
 
 
@@ -291,6 +335,13 @@ def behavior_score(candidate):
     score += min(signals.get("recruiter_response_rate", 0) * 4, 4)
     score += min(signals.get("interview_completion_rate", 0) * 3, 3)
     score += min(max(signals.get("github_activity_score", -1), 0) / 100 * 3, 3)
+    github_score = signals.get("github_activity_score", -1)
+
+    if github_score > 70:
+        score += 2
+
+    if github_score > 90:
+        score += 2
     score += min(signals.get("saved_by_recruiters_30d", 0) / 8 * 2, 2)
     score += min(signals.get("profile_completeness_score", 0) / 100 * 2, 2)
 
@@ -307,6 +358,11 @@ def behavior_score(candidate):
     elif notice > 90:
         score -= 2
 
+    if (
+    signals.get("recruiter_response_rate", 0) < 0.05
+    and last_active_months > 6
+    ):
+        score -= 4
     return clamp(score, 0, 18)
 
 
@@ -366,6 +422,20 @@ def honeypot_penalty(candidate):
 
     if signals.get("github_activity_score", 0) > 95 and not has_tech_title:
         penalty += 8
+
+    consulting_count = 0
+
+    for job in jobs:
+        company = normalize(job.get("company_name", ""))
+
+        if contains_any(company, CONSULTING_COMPANIES):
+            consulting_count += 1
+
+    if len(jobs) > 0 and consulting_count == len(jobs):
+        penalty += 8
+
+    if years < 3 and strong_skill_count > 10:
+        penalty += 20
 
     return penalty
 
@@ -485,6 +555,7 @@ def normalize_scores(ranked):
     for row in ranked:
         scaled = 0.2 + 0.8 * ((row["score"] - min_score) / spread)
         row = dict(row)
+        scaled -= (len(normalized) * 0.00001)
         row["normalized_score"] = round(scaled, 4)
         normalized.append(row)
 
