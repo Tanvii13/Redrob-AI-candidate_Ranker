@@ -1,6 +1,0 @@
-weights:
-  semantic: 0.35
-  skills: 0.25
-  production: 0.15
-  behavioral: 0.15
-  experience: 0.10
