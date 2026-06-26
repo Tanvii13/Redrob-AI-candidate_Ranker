@@ -298,7 +298,9 @@ Top 100 Ranked Candidates
 Candidate Reasoning Explore
 
 ![Candidate Reasoning Explore](Candidate_Reasoning_Explore.png)
+
 ![Candidate Reasoning Explore(2)](Candidate_Reasoning_Explore(2).png)
+
 ![Candidate Reasoning Explore(3)](Candidate_Reasoning_Explore(3).png)
 
 ---
