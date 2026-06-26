@@ -11,8 +11,6 @@ st.title("Redrob AI Candidate Ranker")
 st.markdown("""
 ### Intelligent Candidate Discovery & Ranking System
 
-This project was built for the Redrob Intelligent Candidate Discovery Challenge.
-
 The ranking engine evaluates candidates using:
 
 - AI/ML title relevance
@@ -46,24 +44,41 @@ try:
 
     st.divider()
 
-    # Top Candidates Table
-    st.subheader("Top 20 Ranked Candidates")
+    # Table
+    st.subheader("Top 100 Ranked Candidates")
 
     st.dataframe(
-        df.head(20),
-        height=600,
+        df.head(100),
+        height=700,
         width="stretch",
-        hide_index=True
+        hide_index=True,
+        column_config={
+            "candidate_id": st.column_config.TextColumn(
+                "Candidate ID",
+                width="medium"
+            ),
+            "rank": st.column_config.NumberColumn(
+                "Rank"
+            ),
+            "score": st.column_config.NumberColumn(
+                "Score",
+                format="%.4f"
+            ),
+            "reasoning": st.column_config.TextColumn(
+                "Reasoning",
+                width="large"
+            )
+        }
     )
 
     st.divider()
 
-    # Candidate Reasoning Viewer
+    # Reasoning Explorer
     st.subheader("Candidate Reasoning Explorer")
 
     selected_rank = st.selectbox(
         "Select Candidate Rank",
-        df["rank"].head(20).tolist()
+        df["rank"].tolist()
     )
 
     candidate = df[df["rank"] == selected_rank].iloc[0]
@@ -76,11 +91,14 @@ try:
     with col2:
         st.metric("Score", float(candidate["score"]))
 
-    st.info(candidate["reasoning"])
+    st.text_area(
+        "Full Reasoning",
+        candidate["reasoning"],
+        height=150
+    )
 
     st.divider()
 
-    # Download Button
     st.download_button(
         label="📥 Download Submission CSV",
         data=df.to_csv(index=False),
