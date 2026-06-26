@@ -574,10 +574,12 @@ def write_outputs(ranked, kept_candidates, submission_path, debug_path):
 
         for rank, row in enumerate(normalized, start=1):
             candidate = kept_candidates[row["candidate_id"]]
+            score = row["normalized_score"] - (rank * 0.0001)
+            score =  round(score, 6)
             writer.writerow({
                 "candidate_id": row["candidate_id"],
                 "rank": rank,
-                "score": row["normalized_score"],
+                "score": score,
                 "reasoning": reasoning(candidate, row),
             })
 
