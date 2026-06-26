@@ -30,7 +30,7 @@ The final ranking is generated using a deterministic CPU-only scoring pipeline
 with no external API calls during ranking.
 """)
 
-MAX_SANDBOX_CANDIDATES = 100  # rule 10.5: sandbox is for small samples only
+MAX_SANDBOX_CANDIDATES = 100  
 
 tab_live, tab_precomputed = st.tabs(
     ["🔬 Live Sandbox (upload & rank)", "📊 Full Submission (pre-computed top 100)"]
