@@ -353,6 +353,3 @@ The ranking system evaluates candidates using a weighted combination of title re
 
 GitHub:
 https://github.com/Tanvii13
-
-Submission:
-Redrob Intelligent Candidate Discovery & Ranking Challenge
