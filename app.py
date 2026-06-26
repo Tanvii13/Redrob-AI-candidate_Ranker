@@ -47,27 +47,29 @@ try:
     # Table
     st.subheader("Top 100 Ranked Candidates")
 
-    st.dataframe(
-        df.head(100),
-        height=700,
-        width="stretch",
-        hide_index=True,
-        column_config={
-            "candidate_id": st.column_config.TextColumn(
-                "Candidate ID",
-                width="medium"
-            ),
-            "rank": st.column_config.NumberColumn(
-                "Rank"
-            ),
-            "score": st.column_config.NumberColumn(
-                "Score",
-                format="%.4f"
-            ),
-            "reasoning": st.column_config.TextColumn(
-                "Reasoning",
-                width="large"
-            )
+    sst.dataframe(
+    df.head(100),
+    height=700,
+    width="stretch",
+    hide_index=True,
+    column_config={
+        "candidate_id": st.column_config.TextColumn(
+            "Candidate ID",
+            width="small"      # was medium
+        ),
+        "rank": st.column_config.NumberColumn(
+            "Rank",
+            width="small"
+        ),
+        "score": st.column_config.NumberColumn(
+            "Score",
+            format="%.4f",
+            width="small"
+        ),
+        "reasoning": st.column_config.TextColumn(
+            "Reasoning",
+            width="large"
+        )
         }
     )
 
