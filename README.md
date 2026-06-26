@@ -287,10 +287,6 @@ The sandbox demonstrates:
 
 A smaller sample dataset is used for demonstration purposes.
 
-Demo Video-
-
-<video src="Demo_video.mp4" width="100%" controls></video>
-
 ---
 
 # Compute Environment
