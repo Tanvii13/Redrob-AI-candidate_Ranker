@@ -186,12 +186,6 @@ Redrob-AI-candidate_Ranker/
 │   ├── submission.csv
 │   └── ranked_candidates.csv
 │
-├── src/
-│   ├── skill_matcher.py
-│   ├── behavior_ranker.py
-│   ├── production_matcher.py
-│   ├── reasoning_generator.py
-│   └── final_ranker.py
 │
 ├── app.py
 ├── main.py
