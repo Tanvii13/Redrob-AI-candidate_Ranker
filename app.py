@@ -1,9 +1,8 @@
 import json
-
 import pandas as pd
 import streamlit as st
 
-from main import score_candidate, honeypot_penalty, reasoning, load_job_text
+from main import score_candidate, honeypot_penalty, reasoning, load_job_text, normalize_scores
 
 st.set_page_config(
     page_title="Redrob AI Candidate Ranker",
@@ -84,8 +83,6 @@ with tab_live:
                         scored = score_candidate(candidate)
                         scored["reasoning"] = reasoning(candidate, scored)
                         rows.append(scored)
-                        if scored["penalty"] > 0:
-                            honeypot_rows.append(scored)
                     except Exception as exc:
                         st.warning(
                             f"Skipped a candidate due to an error: {exc}"
@@ -95,6 +92,10 @@ with tab_live:
                 st.error("No candidates could be scored from this file.")
             else:
                 rows.sort(key=lambda r: (-r["score"], r["candidate_id"]))
+                rows = normalize_scores(rows) 
+                for r in rows:
+                    r["score"] = r["normalized_score"]
+                honeypot_rows = [r for r in rows if r["penalty"] > 0]
                 result_df = pd.DataFrame(rows)
 
                 st.success(f"Scored {len(rows)} candidate(s) successfully.")
